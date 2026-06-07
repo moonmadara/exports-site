@@ -1,23 +1,25 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Stats from './components/Stats';
-import Products from './components/Products';
-import Certifications from './components/Certifications';
-import About from './components/About';
-import Leadership from './components/Leadership';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import About from './pages/About';
+import FreshRedOnion from './pages/FreshRedOnion';
+import WhiteOnionPowder from './pages/WhiteOnionPowder';
+import SourcingQuality from './pages/SourcingQuality';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Stats />
-      <Products />
-      <About />
-      <Certifications />
-      <Leadership />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/products/fresh-red-onion" element={<FreshRedOnion />} />
+          <Route path="/products/white-onion-powder" element={<WhiteOnionPowder />} />
+          <Route path="/sourcing-quality" element={<SourcingQuality />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
