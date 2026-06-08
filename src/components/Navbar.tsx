@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sprout, ChevronDown } from 'lucide-react';
+import { Menu, X, Sprout, ChevronDown, MessageCircle } from 'lucide-react';
+
+const WHATSAPP_NUMBER = '919778888339';
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const navLinks = [
   { label: 'Home', to: '/' },
@@ -9,7 +12,8 @@ const navLinks = [
     label: 'Products',
     children: [
       { label: 'Fresh Red Onion', to: '/products/fresh-red-onion' },
-      { label: 'White Onion Powder', to: '/products/white-onion-powder' },
+      { label: 'Onion Powder', to: '/products/onion-powder' },
+      { label: 'Green Bell Pepper', to: '/products/green-bell-pepper' },
     ],
   },
   { label: 'Sourcing & Quality', to: '/sourcing-quality' },
@@ -43,13 +47,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2.5 group">
+          <Link to="/" className="flex items-center gap-2.5">
             <Sprout className="w-8 h-8 text-grove-600" />
-            <div>
-              <span className="text-xl font-display font-bold text-soil-900 tracking-tight">
-                Sattvika Overseas
-              </span>
-            </div>
+            <span className="text-xl font-display font-bold text-soil-900 tracking-tight">
+              Sattvika Overseas
+            </span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -76,7 +78,7 @@ export default function Navbar() {
                     />
                   </button>
                   {productsOpen && (
-                    <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-cream-200 py-2 animate-in fade-in">
+                    <div className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-lg border border-cream-200 py-2">
                       {link.children.map((child) => (
                         <Link
                           key={child.to}
@@ -107,9 +109,18 @@ export default function Navbar() {
                 </Link>
               )
             )}
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-3 inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold bg-[#25D366] text-white hover:bg-[#1ebe57] transition-colors shadow-md"
+            >
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp
+            </a>
             <Link
               to="/contact"
-              className="ml-4 inline-flex items-center px-5 py-2.5 rounded-full text-sm font-semibold bg-grove-600 text-white hover:bg-grove-700 transition-colors shadow-md hover:shadow-lg"
+              className="ml-2 inline-flex items-center px-5 py-2.5 rounded-full text-sm font-semibold bg-grove-600 text-white hover:bg-grove-700 transition-colors shadow-md"
             >
               Get a Quote
             </Link>
@@ -170,12 +181,25 @@ export default function Navbar() {
                 </Link>
               )
             )}
-            <Link
-              to="/contact"
-              className="block mt-2 text-center px-5 py-3 rounded-full text-sm font-semibold bg-grove-600 text-white hover:bg-grove-700 transition-colors"
-            >
-              Get a Quote
-            </Link>
+            <div className="flex flex-col gap-2 mt-3">
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-center px-5 py-3 rounded-full text-sm font-semibold bg-[#25D366] text-white hover:bg-[#1ebe57] transition-colors"
+              >
+                <span className="inline-flex items-center justify-center gap-2">
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp Us
+                </span>
+              </a>
+              <Link
+                to="/contact"
+                className="text-center px-5 py-3 rounded-full text-sm font-semibold bg-grove-600 text-white hover:bg-grove-700 transition-colors"
+              >
+                Get a Quote
+              </Link>
+            </div>
           </div>
         </div>
       )}

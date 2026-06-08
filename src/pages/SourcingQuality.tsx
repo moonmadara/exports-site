@@ -1,15 +1,17 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2, MapPin, Users, Cog, Award } from 'lucide-react';
+import {
+  CheckCircle2,
+  MapPin,
+  Users,
+  Cog,
+  Award,
+  Ship,
+  FileCheck,
+  ShieldCheck,
+  Leaf,
+} from 'lucide-react';
 
-const nashikReasons = [
-  'Excellent shelf life',
-  'High dry matter content',
-  'Attractive red color',
-  'Strong flavor',
-  'Suitable for long-distance export',
-];
-
-const sourcingRegions = [
+const nashikRegions = [
   'Lasalgaon',
   'Niphad',
   'Pimpalgaon Baswant',
@@ -18,37 +20,98 @@ const sourcingRegions = [
   'Yeola',
 ];
 
+const nashikReasons = [
+  'Excellent shelf life',
+  'High dry matter content',
+  'Attractive red color',
+  'Strong flavor and pungency',
+  'Suitable for long-distance export',
+  'High market acceptance in Middle East and Asia',
+];
+
+const capsicumRegions = [
+  'Nashik',
+  'Pune',
+  'Satara',
+  'Sangli',
+  'Ahmednagar',
+];
+
+const capsicumReasons = [
+  'Favourable Growing Conditions',
+  'Protected Cultivation Practices',
+  'Superior Product Quality',
+  'Reliable Supply Volumes',
+  'Experienced Farming Network',
+  'Strong Post-Harvest Infrastructure',
+  'Efficient Logistics Connectivity',
+  'Export-Oriented Production',
+];
+
 const freshOnionSteps = [
   'Initial farm inspection',
-  'Cleaning',
-  'Sorting',
+  'Cleaning & Sorting',
+  'Removal of damaged bulbs',
   'Size grading',
   'Quality inspection',
-  'Packaging',
+  'Pre-shipment Inspection',
+  'Export Packaging',
   'Final dispatch verification',
 ];
 
 const powderSteps = [
-  'Dehydrated onion selection',
-  'Grinding',
-  'Sieving',
-  'Standardization',
+  'Selection of premium & suitable onions',
+  'Washing & Cleaning',
+  'Controlled dehydration',
+  'Grinding & milling',
+  'Quality testing',
+  'Particle size standardization',
   'Moisture testing',
   'Quality verification',
-  'Food-grade packaging',
+  'Food-grade hygienic packaging',
+  'Properly cured',
+];
+
+const pepperSteps = [
+  'Harvesting at optimum maturity',
+  'Cleaning and washing',
+  'Sorting and size grading',
+  'Defect removal',
+  'Quality inspection',
+  'Cold-chain storage',
+  'Export packaging',
+];
+
+const qualityAssurance = [
+  'Physical inspection',
+  'Quality grading',
+  'Size verification',
+  'Freshness assessment',
+  'Packaging inspection',
+  'Traceability check',
+  'Export compliance review',
+  'Pre-dispatch verification',
 ];
 
 const certifications = [
+  'GST',
   'APEDA Registration',
+  'FSSAI License',
   'AD Code Registration',
   'ICEGATE Registration',
+  'IEC Code',
 ];
 
 const documents = [
   'Phytosanitary Certificate',
   'Certificate of Origin',
-  'Fumigation Certificate',
+  'Fumigation Certificate (if required)',
+  'Packing List',
+  'Insurance Documents',
 ];
+
+const shippingMethods = ['Sea Freight', 'Air Freight', 'Reefer Container Services', 'Temperature-Controlled Shipments'];
+const incoterms = ['FOB', 'CIF', 'EXW'];
 
 export default function SourcingQuality() {
   return (
@@ -81,7 +144,7 @@ export default function SourcingQuality() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-grove-100 text-grove-600 flex items-center justify-center">
                 <MapPin className="w-5 h-5" />
               </div>
@@ -89,32 +152,88 @@ export default function SourcingQuality() {
                 Our Sourcing Strength
               </h2>
             </div>
-            <p className="text-soil-600 leading-relaxed max-w-3xl">
-              Our onions are carefully sourced from selected agricultural regions
-              within the Nashik district ({sourcingRegions.join(', ')}).
-            </p>
 
-            <div className="mt-8 grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl p-8 border border-cream-200">
-                <h3 className="text-xl font-display font-bold text-soil-900 mb-4">
-                  Why Nashik Onions?
-                </h3>
-                <ul className="space-y-2.5">
-                  {nashikReasons.map((reason) => (
-                    <li key={reason} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-grove-500 mt-0.5 shrink-0" />
-                      <span className="text-sm text-soil-700">{reason}</span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Nashik Onions */}
+            <div className="mb-12">
+              <h3 className="text-xl font-display font-bold text-soil-900 mb-3">
+                Export Quality Onions
+              </h3>
+              <p className="text-soil-600 leading-relaxed max-w-3xl">
+                Our onions are sourced from selected agricultural regions within
+                the Nashik district of Maharashtra, India's most renowned
+                onion-producing region.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {nashikRegions.map((r) => (
+                  <span
+                    key={r}
+                    className="px-3 py-1.5 rounded-lg bg-onion-50 text-sm font-medium text-onion-700 border border-onion-200"
+                  >
+                    {r}
+                  </span>
+                ))}
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Onion fields"
-                  className="w-full h-full object-cover min-h-[260px]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-grove-900/40 to-transparent" />
+
+              <div className="mt-6 grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-2xl p-8 border border-cream-200">
+                  <h4 className="text-lg font-display font-bold text-soil-900 mb-4">
+                    Why Nashik Onions?
+                  </h4>
+                  <ul className="space-y-2.5">
+                    {nashikReasons.map((reason) => (
+                      <li key={reason} className="flex items-start gap-3">
+                        <CheckCircle2 className="w-5 h-5 text-grove-500 mt-0.5 shrink-0" />
+                        <span className="text-sm text-soil-700">{reason}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src="https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    alt="Onion fields"
+                    className="w-full h-full object-cover min-h-[260px]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-grove-900/40 to-transparent" />
+                </div>
+              </div>
+            </div>
+
+            {/* Green Bell Peppers */}
+            <div>
+              <h3 className="text-xl font-display font-bold text-soil-900 mb-3">
+                Green Bell Peppers (Capsicum)
+              </h3>
+              <p className="text-soil-600 leading-relaxed max-w-3xl">
+                Sattvika Overseas strategically sources premium export-quality
+                green bell peppers from the major regions of Maharashtra. These
+                regions are recognized for their favourable climatic conditions,
+                skilled farming communities, modern cultivation practices, and
+                strong agricultural infrastructure.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {capsicumRegions.map((r) => (
+                  <span
+                    key={r}
+                    className="px-3 py-1.5 rounded-lg bg-grove-50 text-sm font-medium text-grove-700 border border-grove-200"
+                  >
+                    {r}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 bg-white rounded-2xl p-8 border border-cream-200">
+                <h4 className="text-lg font-display font-bold text-soil-900 mb-4">
+                  Why Maharashtra Region Bell Peppers?
+                </h4>
+                <div className="grid sm:grid-cols-2 gap-x-8 gap-y-2.5">
+                  {capsicumReasons.map((reason) => (
+                    <div key={reason} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-4 h-4 text-grove-500 mt-0.5 shrink-0" />
+                      <span className="text-sm text-soil-700">{reason}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
@@ -132,13 +251,30 @@ export default function SourcingQuality() {
                 <Users className="w-5 h-5" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-soil-900">
-                Farmer Relationships
+                Farmer Relationships & Community Development
               </h2>
             </div>
             <p className="text-soil-600 leading-relaxed max-w-3xl">
-              We work closely with farmers to reduce middlemen, maintain direct
-              procurement, promote quality cultivation, and support fair pricing.
+              At Sattvika Overseas, farmers are the foundation of our business.
+              We maintain long-term, strong and reliable relationships with
+              farming communities across Maharashtra and work directly with
+              growers whenever possible.
             </p>
+            <div className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-2.5">
+              {[
+                'Maintaining direct procurement relationships',
+                'Encouraging responsible agricultural practices',
+                'Promoting quality-focused cultivation',
+                'Supporting fair and transparent pricing',
+                'Creating long-term purchasing commitments',
+                'Reducing unnecessary middlemen',
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <Leaf className="w-4 h-4 text-grove-500 mt-0.5 shrink-0" />
+                  <span className="text-sm text-soil-700">{item}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Processing Standards */}
@@ -153,13 +289,13 @@ export default function SourcingQuality() {
                 <Cog className="w-5 h-5" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-soil-900">
-                Processing Standards
+                Processing & Quality Management
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               <div className="bg-white rounded-2xl p-8 border border-cream-200">
-                <h3 className="text-xl font-display font-bold text-soil-900 mb-4">
+                <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
                   Fresh Onion Processing
                 </h3>
                 <ol className="space-y-2">
@@ -176,7 +312,7 @@ export default function SourcingQuality() {
                 </ol>
               </div>
               <div className="bg-white rounded-2xl p-8 border border-cream-200">
-                <h3 className="text-xl font-display font-bold text-soil-900 mb-4">
+                <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
                   Onion Powder Processing
                 </h3>
                 <ol className="space-y-2">
@@ -192,6 +328,50 @@ export default function SourcingQuality() {
                   ))}
                 </ol>
               </div>
+              <div className="bg-white rounded-2xl p-8 border border-cream-200">
+                <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
+                  Green Bell Pepper Processing
+                </h3>
+                <ol className="space-y-2">
+                  {pepperSteps.map((step, i) => (
+                    <li key={step} className="flex items-start gap-3">
+                      <span className="w-6 h-6 rounded-full bg-grove-100 text-grove-700 flex items-center justify-center text-xs font-bold shrink-0">
+                        {i + 1}
+                      </span>
+                      <span className="text-sm text-soil-700 pt-0.5">
+                        {step}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Quality Assurance */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-grove-50 rounded-2xl p-8 sm:p-10 border border-grove-200"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-grove-100 text-grove-600 flex items-center justify-center">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-soil-900">
+                Quality Assurance
+              </h2>
+            </div>
+            <p className="text-soil-600 mb-6">Every shipment undergoes:</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-2.5">
+              {qualityAssurance.map((item) => (
+                <div key={item} className="flex items-start gap-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-grove-600 mt-0.5 shrink-0" />
+                  <span className="text-sm text-soil-700">{item}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
 
@@ -227,16 +407,67 @@ export default function SourcingQuality() {
               </div>
               <div className="bg-white rounded-2xl p-8 border border-cream-200">
                 <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
-                  Export Documentation
+                  Product & Shipment Compliance
                 </h3>
                 <ul className="space-y-2.5">
                   {documents.map((doc) => (
                     <li key={doc} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-onion-500 mt-0.5 shrink-0" />
+                      <FileCheck className="w-5 h-5 text-onion-500 mt-0.5 shrink-0" />
                       <span className="text-sm text-soil-700">{doc}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Logistics */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl p-8 sm:p-10 border border-cream-200"
+          >
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-grove-100 text-grove-600 flex items-center justify-center">
+                <Ship className="w-5 h-5" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-soil-900">
+                Logistics & Shipping
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
+                  Shipping Methods
+                </h3>
+                <div className="flex flex-wrap gap-2.5">
+                  {shippingMethods.map((m) => (
+                    <span
+                      key={m}
+                      className="px-4 py-2 rounded-lg bg-cream-100 text-sm font-medium text-soil-700 border border-cream-200"
+                    >
+                      {m}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
+                  Incoterms Available
+                </h3>
+                <div className="flex flex-wrap gap-2.5">
+                  {incoterms.map((t) => (
+                    <span
+                      key={t}
+                      className="px-4 py-2 rounded-lg bg-grove-100 text-sm font-semibold text-grove-700 border border-grove-200"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

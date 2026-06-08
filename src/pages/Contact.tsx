@@ -1,6 +1,9 @@
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Globe, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Mail, Globe, Clock, Send, CheckCircle2, MessageCircle } from 'lucide-react';
+
+const WHATSAPP_NUMBER = '919778888339';
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -27,6 +30,9 @@ export default function Contact() {
             <h1 className="mt-3 text-4xl sm:text-5xl font-display font-bold text-balance">
               Get in Touch
             </h1>
+            <p className="mt-4 text-grove-200 text-lg">
+              Together, we grow global partnerships.
+            </p>
           </motion.div>
         </div>
       </section>
@@ -52,9 +58,9 @@ export default function Contact() {
                       Head Office
                     </p>
                     <p className="mt-1 text-sm text-soil-500">
-                      Thane, Mumbai - 400607,
+                      Thane, Maharashtra - 400607,
                       <br />
-                      Maharashtra, India
+                      India
                     </p>
                   </div>
                 </div>
@@ -95,6 +101,27 @@ export default function Contact() {
                 <div className="h-px bg-cream-200" />
 
                 <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
+                    <MessageCircle className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-soil-900">
+                      WhatsApp
+                    </p>
+                    <a
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 text-sm text-[#25D366] hover:text-[#1ebe57] transition-colors font-medium"
+                    >
+                      Chat with us on WhatsApp
+                    </a>
+                  </div>
+                </div>
+
+                <div className="h-px bg-cream-200" />
+
+                <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-grove-50 text-grove-600 flex items-center justify-center shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
@@ -110,6 +137,17 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+
+              {/* WhatsApp CTA */}
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-3 w-full px-6 py-4 rounded-xl bg-[#25D366] text-white font-semibold hover:bg-[#1ebe57] transition-colors shadow-md"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Chat with Us on WhatsApp
+              </a>
             </motion.div>
 
             {/* Contact Form */}

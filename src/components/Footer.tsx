@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Sprout, MapPin, Mail, Globe, Clock } from 'lucide-react';
+import { Sprout, MapPin, Mail, Globe, Clock, MessageCircle } from 'lucide-react';
+
+const WHATSAPP_NUMBER = '919778888339';
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export default function Footer() {
   return (
@@ -13,10 +16,12 @@ export default function Footer() {
                 Sattvika Overseas
               </span>
             </div>
+            <p className="mt-1 text-sm text-grove-400 italic">
+              Premium Agricultural Exports from Maharashtra, India
+            </p>
             <p className="mt-4 text-sm text-soil-400 leading-relaxed">
               Delivering India's Agricultural Excellence to Global Markets.
-              Premium Fresh Red Onions and White Onion Powder sourced directly
-              from Nashik, Maharashtra.
+              Together, we grow global partnerships.
             </p>
           </div>
 
@@ -29,7 +34,8 @@ export default function Footer() {
                 ['Home', '/'],
                 ['About Us', '/about'],
                 ['Fresh Red Onion', '/products/fresh-red-onion'],
-                ['White Onion Powder', '/products/white-onion-powder'],
+                ['Onion Powder', '/products/onion-powder'],
+                ['Green Bell Pepper', '/products/green-bell-pepper'],
                 ['Sourcing & Quality', '/sourcing-quality'],
                 ['Contact Us', '/contact'],
               ].map(([label, to]) => (
@@ -94,32 +100,45 @@ export default function Footer() {
                   www.sattvikaoverseas.com
                 </span>
               </li>
+              <li>
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-[#25D366] hover:text-[#1ebe57] transition-colors font-medium"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Chat on WhatsApp
+                </a>
+              </li>
             </ul>
 
-            <div className="mt-6">
+            <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-grove-600 text-white text-sm font-semibold hover:bg-grove-700 transition-colors"
               >
                 Get a Quote
               </Link>
+              <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#25D366] text-white text-sm font-semibold hover:bg-[#1ebe57] transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-soil-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-soil-800 text-center">
           <p className="text-xs text-soil-500">
             &copy; {new Date().getFullYear()} Sattvika Overseas. All rights
-            reserved.
+            reserved. &mdash; &ldquo;Delivering India&rsquo;s Agricultural
+            Excellence to Global Markets.&rdquo;
           </p>
-          <div className="flex items-center gap-6 text-xs text-soil-500">
-            <a href="#" className="hover:text-cream-200 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-cream-200 transition-colors">
-              Terms of Service
-            </a>
-          </div>
         </div>
       </div>
     </footer>

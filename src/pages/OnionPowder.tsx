@@ -1,33 +1,45 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, ArrowRight, Package, Ruler, MessageCircle } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Package, MessageCircle } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '919778888339';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const specs: [string, string][] = [
-  ['Origin', 'Nashik, Maharashtra, India'],
-  ['Color', 'Red'],
-  ['Shape', 'Round'],
-  ['Maturity', 'Fully Mature'],
+  ['Moisture', '\u2264 6%'],
+  ['Color', 'White to Cream'],
   ['Purity', '99%'],
-  ['Moisture', 'Natural'],
-  ['Shelf Life', 'Long Storage Variety'],
+  ['Mesh Size', '80\u2013120 Mesh'],
+  ['Shelf Life', '12\u201318 Months'],
 ];
 
-const qualityParams = [
-  'Free from decay',
-  'Free from sprouting',
-  'Free from excessive moisture',
-  'Free from pest infestation',
-  'Proper neck drying',
-  'Uniform grading',
+const features = [
+  'Strong natural aroma',
+  'Zero additives or preservatives',
+  'Fine mesh powder',
+  'Low moisture content',
+  'Long storage stability',
 ];
 
-const sizes = ['35-45 mm', '45-55 mm', '50-60 mm', '55-65 mm', '65 mm+'];
-const packaging = ['5 Kg Mesh Bags', '10 Kg Mesh Bags', '20 Kg Mesh Bags', '25 Kg Mesh Bags', '50 Kg Mesh Bags'];
+const applications = [
+  'Seasoning blends',
+  'Food processing',
+  'Hotels and restaurants',
+  'Snack manufacturing',
+  'Spice mixes',
+];
 
-export default function FreshRedOnion() {
+const packaging = [
+  '5 Kg Food Grade Bags',
+  '10 Kg Food Grade Bags',
+  '20 Kg Food Grade Bags',
+  '25 Kg Food Grade Bags',
+  'Customized & Private Label Packaging',
+  'Multi-layer moisture-resistant packaging',
+  'Bulk export cartons',
+];
+
+export default function OnionPowder() {
   return (
     <>
       {/* Page Header */}
@@ -46,15 +58,16 @@ export default function FreshRedOnion() {
               <span>/</span>
               <span className="text-cream-200">Products</span>
               <span>/</span>
-              <span className="text-cream-200">Fresh Red Onion</span>
+              <span className="text-cream-200">Onion Powder</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-balance">
-              Fresh Red Onion
+              Onion Powder
             </h1>
             <p className="mt-4 text-lg text-grove-200 max-w-2xl">
-              India is one of the world's largest producers and exporters of
-              onions. Sattvika Overseas sources premium-quality onions from
-              Maharashtra's renowned onion-growing belt regions.
+              Our onion powder is produced from carefully selected onions
+              processed under hygienic conditions using modern dehydration
+              technology. It offers excellent flavour, aroma, and consistency
+              for food manufacturers and processors.
             </p>
           </motion.div>
         </div>
@@ -62,24 +75,6 @@ export default function FreshRedOnion() {
 
       <section className="py-20 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Product Characteristics */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-12 flex flex-wrap gap-3"
-          >
-            {['Fresh', 'Mature', 'Uniform Shape', 'Export Quality', 'Long Shelf Life'].map((char) => (
-              <span
-                key={char}
-                className="px-4 py-2 rounded-lg bg-onion-50 text-sm font-medium text-onion-700 border border-onion-200"
-              >
-                {char}
-              </span>
-            ))}
-          </motion.div>
-
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left - Image */}
             <motion.div
@@ -90,8 +85,8 @@ export default function FreshRedOnion() {
             >
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.pexels.com/photos/539703/pexels-photo-539703.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Fresh Red Onions"
+                  src="https://images.pexels.com/photos/28025270/pexels-photo-28025270.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Onion Powder"
                   className="w-full h-[420px] object-cover"
                 />
               </div>
@@ -105,9 +100,25 @@ export default function FreshRedOnion() {
               transition={{ duration: 0.6 }}
               className="space-y-8"
             >
+              {/* Features */}
               <div>
                 <h2 className="text-2xl font-display font-bold text-soil-900 mb-4">
-                  Product Specifications
+                  Product Features
+                </h2>
+                <ul className="space-y-2.5">
+                  {features.map((f) => (
+                    <li key={f} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-grove-500 mt-0.5 shrink-0" />
+                      <span className="text-sm text-soil-600">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Spec Table */}
+              <div>
+                <h2 className="text-2xl font-display font-bold text-soil-900 mb-4">
+                  Specifications
                 </h2>
                 <div className="bg-white rounded-xl border border-cream-200 overflow-hidden">
                   {specs.map(([label, value], i) => (
@@ -128,76 +139,50 @@ export default function FreshRedOnion() {
                 </div>
               </div>
 
+              {/* Applications */}
               <div>
                 <h2 className="text-2xl font-display font-bold text-soil-900 mb-4">
-                  Quality Parameters
+                  Applications
                 </h2>
-                <ul className="space-y-2.5">
-                  {qualityParams.map((param) => (
-                    <li key={param} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-grove-500 mt-0.5 shrink-0" />
-                      <span className="text-sm text-soil-600">{param}</span>
-                    </li>
+                <div className="flex flex-wrap gap-2.5">
+                  {applications.map((app) => (
+                    <span
+                      key={app}
+                      className="px-4 py-2 rounded-lg bg-cream-100 text-sm font-medium text-soil-700 border border-cream-200"
+                    >
+                      {app}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             </motion.div>
           </div>
 
-          {/* Sizes & Packaging */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl p-8 border border-cream-200"
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-grove-50 text-grove-600 flex items-center justify-center">
-                  <Ruler className="w-5 h-5" />
+          {/* Packaging */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mt-16 bg-white rounded-2xl p-8 border border-cream-200"
+          >
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 rounded-xl bg-grove-50 text-grove-600 flex items-center justify-center">
+                <Package className="w-5 h-5" />
+              </div>
+              <h3 className="text-xl font-display font-bold text-soil-900">
+                Packaging Options
+              </h3>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-x-8 gap-y-2.5">
+              {packaging.map((pkg) => (
+                <div key={pkg} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-grove-500 mt-0.5 shrink-0" />
+                  <span className="text-sm text-soil-600">{pkg}</span>
                 </div>
-                <h3 className="text-xl font-display font-bold text-soil-900">
-                  Available Sizes
-                </h3>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                {sizes.map((size) => (
-                  <span
-                    key={size}
-                    className="px-4 py-2 rounded-lg bg-cream-100 text-sm font-medium text-soil-700 border border-cream-200"
-                  >
-                    {size}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-2xl p-8 border border-cream-200"
-            >
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-xl bg-onion-50 text-onion-600 flex items-center justify-center">
-                  <Package className="w-5 h-5" />
-                </div>
-                <h3 className="text-xl font-display font-bold text-soil-900">
-                  Packaging Options
-                </h3>
-              </div>
-              <ul className="space-y-2.5">
-                {packaging.map((pkg) => (
-                  <li key={pkg} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-grove-500 mt-0.5 shrink-0" />
-                    <span className="text-sm text-soil-600">{pkg}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
+              ))}
+            </div>
+          </motion.div>
 
           {/* CTA */}
           <motion.div
@@ -208,10 +193,10 @@ export default function FreshRedOnion() {
             className="mt-16 text-center bg-grove-800 rounded-2xl p-10 text-white"
           >
             <h2 className="text-2xl font-display font-bold text-balance">
-              Interested in Fresh Red Onions?
+              Interested in Onion Powder?
             </h2>
             <p className="mt-3 text-grove-200 max-w-lg mx-auto">
-              Contact us for pricing, availability, and custom packaging
+              Contact us for pricing, specifications, and custom packaging
               requirements.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-4">

@@ -6,28 +6,50 @@ const WHATSAPP_NUMBER = '919778888339';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const specs: [string, string][] = [
-  ['Origin', 'Nashik, Maharashtra, India'],
-  ['Color', 'Red'],
-  ['Shape', 'Round'],
-  ['Maturity', 'Fully Mature'],
-  ['Purity', '99%'],
-  ['Moisture', 'Natural'],
-  ['Shelf Life', 'Long Storage Variety'],
+  ['Product Name', 'Fresh Green Bell Pepper (Capsicum)'],
+  ['Botanical Name', 'Capsicum annuum'],
+  ['Origin', 'Maharashtra, India'],
+  ['Colour', 'Uniform Bright Green'],
+  ['Shape', 'Blocky Bell Shape'],
+  ['Texture', 'Firm and Crisp'],
+  ['Taste', 'Mild, Fresh Flavour'],
+  ['Harvesting Stage', 'Commercial Mature Green Stage'],
+  ['Freshness', 'Freshly Harvested'],
+  ['Shelf Life', '2\u20134 Weeks Under Proper Cold Storage'],
+  ['Pest Damage', 'Not Accepted'],
+  ['Decay', 'Not Accepted'],
+  ['Defects', 'Minimal'],
+  ['Quality', 'Export Grade'],
 ];
 
-const qualityParams = [
-  'Free from decay',
-  'Free from sprouting',
-  'Free from excessive moisture',
-  'Free from pest infestation',
-  'Proper neck drying',
-  'Uniform grading',
+const sizes = [
+  { label: 'Small Grade', range: '80\u2013100 mm' },
+  { label: 'Medium Grade', range: '100\u2013140 mm' },
+  { label: 'Large Grade', range: '140\u2013180 mm' },
+  { label: 'Premium Grade', range: '180 mm+' },
 ];
 
-const sizes = ['35-45 mm', '45-55 mm', '50-60 mm', '55-65 mm', '65 mm+'];
-const packaging = ['5 Kg Mesh Bags', '10 Kg Mesh Bags', '20 Kg Mesh Bags', '25 Kg Mesh Bags', '50 Kg Mesh Bags'];
+const packaging = [
+  '4 kg Net Weight',
+  '5 kg Net Weight',
+  '6 kg Net Weight',
+  '8 kg Net Weight',
+  '10 kg Net Weight',
+  'Export-Grade 5-Ply Corrugated Cartons',
+  'Ventilated Boxes',
+  'Food Grade Export Packaging',
+  'Customized Buyer Packaging',
+];
 
-export default function FreshRedOnion() {
+const applications = [
+  'Supermarkets',
+  'Hotels',
+  'Restaurants',
+  'Food Service Industry',
+  'Fresh Produce Markets',
+];
+
+export default function GreenBellPepper() {
   return (
     <>
       {/* Page Header */}
@@ -46,15 +68,15 @@ export default function FreshRedOnion() {
               <span>/</span>
               <span className="text-cream-200">Products</span>
               <span>/</span>
-              <span className="text-cream-200">Fresh Red Onion</span>
+              <span className="text-cream-200">Green Bell Pepper</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-display font-bold text-balance">
-              Fresh Red Onion
+              Premium Green Bell Pepper
             </h1>
             <p className="mt-4 text-lg text-grove-200 max-w-2xl">
-              India is one of the world's largest producers and exporters of
-              onions. Sattvika Overseas sources premium-quality onions from
-              Maharashtra's renowned onion-growing belt regions.
+              Sattvika Overseas supplies fresh export-quality green bell
+              peppers sourced from carefully selected farms in Maharashtra known
+              for producing healthy, vibrant, and high-quality vegetables.
             </p>
           </motion.div>
         </div>
@@ -62,24 +84,6 @@ export default function FreshRedOnion() {
 
       <section className="py-20 bg-cream-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Product Characteristics */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="mb-12 flex flex-wrap gap-3"
-          >
-            {['Fresh', 'Mature', 'Uniform Shape', 'Export Quality', 'Long Shelf Life'].map((char) => (
-              <span
-                key={char}
-                className="px-4 py-2 rounded-lg bg-onion-50 text-sm font-medium text-onion-700 border border-onion-200"
-              >
-                {char}
-              </span>
-            ))}
-          </motion.div>
-
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Left - Image */}
             <motion.div
@@ -90,8 +94,8 @@ export default function FreshRedOnion() {
             >
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.pexels.com/photos/539703/pexels-photo-539703.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Fresh Red Onions"
+                  src="https://images.pexels.com/photos/1153690/pexels-photo-1153690.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Green Bell Peppers"
                   className="w-full h-[420px] object-cover"
                 />
               </div>
@@ -113,7 +117,7 @@ export default function FreshRedOnion() {
                   {specs.map(([label, value], i) => (
                     <div
                       key={label}
-                      className={`flex items-center justify-between px-5 py-3.5 ${
+                      className={`flex items-center justify-between px-5 py-3 ${
                         i % 2 === 0 ? 'bg-cream-50' : 'bg-white'
                       }`}
                     >
@@ -128,18 +132,21 @@ export default function FreshRedOnion() {
                 </div>
               </div>
 
+              {/* Applications */}
               <div>
                 <h2 className="text-2xl font-display font-bold text-soil-900 mb-4">
-                  Quality Parameters
+                  Applications
                 </h2>
-                <ul className="space-y-2.5">
-                  {qualityParams.map((param) => (
-                    <li key={param} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-grove-500 mt-0.5 shrink-0" />
-                      <span className="text-sm text-soil-600">{param}</span>
-                    </li>
+                <div className="flex flex-wrap gap-2.5">
+                  {applications.map((app) => (
+                    <span
+                      key={app}
+                      className="px-4 py-2 rounded-lg bg-cream-100 text-sm font-medium text-soil-700 border border-cream-200"
+                    >
+                      {app}
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -161,14 +168,19 @@ export default function FreshRedOnion() {
                   Available Sizes
                 </h3>
               </div>
-              <div className="flex flex-wrap gap-3">
-                {sizes.map((size) => (
-                  <span
-                    key={size}
-                    className="px-4 py-2 rounded-lg bg-cream-100 text-sm font-medium text-soil-700 border border-cream-200"
+              <div className="space-y-3">
+                {sizes.map((s) => (
+                  <div
+                    key={s.label}
+                    className="flex items-center justify-between px-4 py-3 rounded-lg bg-cream-50 border border-cream-200"
                   >
-                    {size}
-                  </span>
+                    <span className="text-sm font-medium text-soil-700">
+                      {s.label}
+                    </span>
+                    <span className="text-sm font-semibold text-grove-700">
+                      {s.range}
+                    </span>
+                  </div>
                 ))}
               </div>
             </motion.div>
@@ -196,6 +208,9 @@ export default function FreshRedOnion() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-sm text-grove-600 font-medium">
+                Cold Chain Available: Yes
+              </p>
             </motion.div>
           </div>
 
@@ -208,7 +223,7 @@ export default function FreshRedOnion() {
             className="mt-16 text-center bg-grove-800 rounded-2xl p-10 text-white"
           >
             <h2 className="text-2xl font-display font-bold text-balance">
-              Interested in Fresh Red Onions?
+              Interested in Green Bell Peppers?
             </h2>
             <p className="mt-3 text-grove-200 max-w-lg mx-auto">
               Contact us for pricing, availability, and custom packaging
