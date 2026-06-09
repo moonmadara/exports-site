@@ -11,12 +11,14 @@ const navLinks = [
   {
     label: 'Products',
     children: [
+      { label: 'All Products', to: '/products' },
       { label: 'Fresh Red Onion', to: '/products/fresh-red-onion' },
       { label: 'Onion Powder', to: '/products/onion-powder' },
       { label: 'Green Bell Pepper', to: '/products/green-bell-pepper' },
     ],
   },
   { label: 'Sourcing & Quality', to: '/sourcing-quality' },
+  { label: 'Certifications', to: '/certifications-compliance' },
   { label: 'Contact Us', to: '/contact' },
 ];
 

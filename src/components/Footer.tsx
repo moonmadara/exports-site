@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sprout, MapPin, Mail, Globe, Clock, MessageCircle } from 'lucide-react';
+import { Sprout, MapPin, Mail, Globe, Clock, MessageCircle, ChevronDown } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '919778888339';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export default function Footer() {
+  const [productsOpen, setProductsOpen] = useState(false);
+
   return (
     <footer className="bg-soil-900 text-cream-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
@@ -30,24 +33,71 @@ export default function Footer() {
               Quick Links
             </h4>
             <ul className="mt-4 space-y-2.5">
-              {[
-                ['Home', '/'],
-                ['About Us', '/about'],
-                ['Fresh Red Onion', '/products/fresh-red-onion'],
-                ['Onion Powder', '/products/onion-powder'],
-                ['Green Bell Pepper', '/products/green-bell-pepper'],
-                ['Sourcing & Quality', '/sourcing-quality'],
-                ['Contact Us', '/contact'],
-              ].map(([label, to]) => (
-                <li key={to}>
-                  <Link
-                    to={to}
-                    className="text-sm text-soil-400 hover:text-cream-200 transition-colors"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/" className="text-sm text-soil-400 hover:text-cream-200 transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-sm text-soil-400 hover:text-cream-200 transition-colors">
+                  About Us
+                </Link>
+              </li>
+
+              {/* Expandable Products */}
+              <li>
+                <button
+                  onClick={() => setProductsOpen(!productsOpen)}
+                  className="flex items-center justify-between w-full text-sm text-soil-400 hover:text-cream-200 transition-colors"
+                >
+                  <span>Products</span>
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      productsOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                {productsOpen && (
+                  <ul className="mt-2 ml-4 space-y-2 border-l border-soil-700 pl-3">
+                    <li>
+                      <Link to="/products" className="text-sm text-soil-500 hover:text-cream-200 transition-colors">
+                        All Products
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/fresh-red-onion" className="text-sm text-soil-500 hover:text-cream-200 transition-colors">
+                        Fresh Red Onion
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/onion-powder" className="text-sm text-soil-500 hover:text-cream-200 transition-colors">
+                        Onion Powder
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/products/green-bell-pepper" className="text-sm text-soil-500 hover:text-cream-200 transition-colors">
+                        Green Bell Pepper
+                      </Link>
+                    </li>
+                  </ul>
+                )}
+              </li>
+
+              <li>
+                <Link to="/sourcing-quality" className="text-sm text-soil-400 hover:text-cream-200 transition-colors">
+                  Sourcing & Quality
+                </Link>
+              </li>
+              <li>
+                <Link to="/certifications-compliance" className="text-sm text-soil-400 hover:text-cream-200 transition-colors">
+                  Certifications & Compliance
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-soil-400 hover:text-cream-200 transition-colors">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
 

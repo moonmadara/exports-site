@@ -162,7 +162,7 @@ export default function Home() {
               className="mt-10 flex flex-wrap gap-4"
             >
               <Link
-                to="/products/fresh-red-onion"
+                to="/products"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-onion-500 text-white font-semibold hover:bg-onion-600 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Explore Our Products
