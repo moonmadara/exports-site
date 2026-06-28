@@ -348,9 +348,9 @@ export default function Home() {
                 tag: 'Fresh Vegetables',
                 desc: 'Export-quality capsicum — firm, crisp, uniform bright green, available in multiple size grades.',
                 images: [
-                  { src: 'https://images.pexels.com/photos/1153690/pexels-photo-1153690.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Green bell peppers' },
-                  { src: 'https://images.pexels.com/photos/3733944/pexels-photo-3733944.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Bell pepper harvest' },
-                  { src: 'https://images.pexels.com/photos/209339/pexels-photo-209339.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Fresh vegetables' },
+                  { src: 'images/green-bell-pepper/Pepper1.jpeg', alt: 'Green bell peppers' },
+                  { src: 'images/green-bell-pepper/Pepper2.jpeg', alt: 'Bell pepper harvest' },
+                  { src: 'images/green-bell-pepper/Pepper3.jpeg', alt: 'Fresh vegetables' },
                 ],
               },
             ].map((product, i) => (
