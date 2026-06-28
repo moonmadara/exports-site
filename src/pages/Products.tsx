@@ -47,9 +47,9 @@ const products: ProductData[] = [
     tagColor: 'bg-grove-50 text-grove-700 border-grove-200',
     desc: 'Export-quality capsicum — firm, crisp, uniform bright green. Available in Small, Medium, Large, and Premium grades.',
     images: [
-      { src: 'https://images.pexels.com/photos/1153690/pexels-photo-1153690.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Green bell peppers' },
-      { src: 'https://images.pexels.com/photos/3733944/pexels-photo-3733944.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Bell pepper harvest' },
-      { src: 'https://images.pexels.com/photos/209339/pexels-photo-209339.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Fresh vegetables' },
+      { src: 'images/green-bell-pepper/Pepper1.jpeg', alt: 'Green bell peppers' },
+      { src: 'images/green-bell-pepper/Pepper2.jpeg', alt: 'Bell pepper harvest' },
+      { src: 'images/green-bell-pepper/Pepper3.jpeg', alt: 'Fresh vegetables' },
     ],
     highlights: ['Export Grade', 'Cold Chain Ready', '4 Size Grades', 'Firm & Crisp'],
   },
