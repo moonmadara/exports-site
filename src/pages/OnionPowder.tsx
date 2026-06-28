@@ -9,9 +9,9 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const productImages = [
   { src: 'images/onion-powder/powder1.jpeg', alt: 'Onion powder' },
-  { src: 'images/onion-powder/powder2.jpeg', alt: 'Spice processing' },
-  { src: 'images/onion-powder/powder3.jpeg', alt: 'Agricultural landscape' },
-  { src: 'images/onion-powder/powder4.jpeg', alt: 'Packaged spices' },
+  { src: 'images/onion-powder/powder1.jpeg', alt: 'Spice processing' },
+  { src: 'images/onion-powder/powder1.jpeg', alt: 'Agricultural landscape' },
+  { src: 'images/onion-powder/powder1.jpeg', alt: 'Packaged spices' },
 ];
 
 const specs: [string, string][] = [
