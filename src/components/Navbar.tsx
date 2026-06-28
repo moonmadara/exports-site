@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sprout, ChevronDown, MessageCircle } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageCircle } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -49,8 +49,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2.5">
-            <Sprout className="w-8 h-8 text-grove-600" />
+          <Link to="/" className="flex items-center gap-3">
+            <img src="/Logo.png" alt="Sattvika Overseas Logo" className="h-10 w-auto" />
             <span className="text-xl font-display font-bold text-soil-900 tracking-tight">
               Sattvika Overseas
             </span>

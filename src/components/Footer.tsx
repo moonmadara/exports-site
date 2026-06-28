@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sprout, MapPin, Mail, Phone, Globe, Clock, MessageCircle, ChevronDown } from 'lucide-react';
+import { MapPin, Mail, Phone, Globe, Clock, MessageCircle, ChevronDown } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
@@ -13,8 +13,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           <div>
-            <div className="flex items-center gap-2.5">
-              <Sprout className="w-7 h-7 text-grove-400" />
+            <div className="flex items-center gap-3">
+              <img src="/Logo.png" alt="Sattvika Overseas Logo" className="h-10 w-auto" />
               <span className="text-xl font-display font-bold text-white">
                 Sattvika Overseas
               </span>
