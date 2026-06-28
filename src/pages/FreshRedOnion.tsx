@@ -8,10 +8,10 @@ const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const productImages = [
-  { src: 'https://images.pexels.com/photos/539703/pexels-photo-539703.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Fresh Red Onions' },
-  { src: 'https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Red onion harvest' },
-  { src: 'https://images.pexels.com/photos/144432/pexels-photo-144432.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Onion close-up' },
-  { src: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Fresh produce display' },
+  { src: '/images/products/fresh-red-onion/Onion1.jpeg', alt: 'Fresh Red Onions' },
+  { src: '/images/products/fresh-red-onion/Onion2.jpeg', alt: 'Red onion harvest' },
+  { src: '/images/products/fresh-red-onion/Onion3.jpeg', alt: 'Onion close-up' },
+  { src: '/images/products/fresh-red-onion/Onion4.jpeg', alt: 'Fresh produce display' },
 ];
 
 const specs: [string, string][] = [

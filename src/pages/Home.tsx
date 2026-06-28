@@ -325,9 +325,10 @@ export default function Home() {
                 tag: 'Fresh Produce',
                 desc: 'Sourced from Nashik, Maharashtra. Uniform shape, full maturity, export quality, and long shelf life.',
                 images: [
-                  { src: 'https://images.pexels.com/photos/539703/pexels-photo-539703.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Fresh Red Onions' },
-                  { src: 'https://images.pexels.com/photos/326333/pexels-photo-326333.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Red onion harvest' },
-                  { src: 'https://images.pexels.com/photos/144432/pexels-photo-144432.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Onion variety' },
+                  { src: '/images/products/fresh-red-onion/Onion1.jpeg', alt: 'Fresh Red Onions' },
+                  { src: '/images/products/fresh-red-onion/Onion2.jpeg', alt: 'Red onion harvest' },
+                  { src: '/images/products/fresh-red-onion/Onion3.jpeg', alt: 'Onion variety' },
+                  { src: '/images/products/fresh-red-onion/Onion4.jpeg', alt: 'Fresh produce display' },
                 ],
               },
               {
