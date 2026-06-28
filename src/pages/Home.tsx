@@ -21,19 +21,19 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const heroImages = [
   {
-    src: 'https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/images/carousel/Home1.jpeg',
     alt: 'Agricultural fields in Maharashtra',
   },
   {
-    src: 'https://images.pexels.com/photos/539703/pexels-photo-539703.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/images/carousel/Home2.jpeg',
     alt: 'Fresh red onions',
   },
   {
-    src: 'https://images.pexels.com/photos/1153690/pexels-photo-1153690.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/images/carousel/Home3.jpeg',
     alt: 'Fresh green bell peppers',
   },
   {
-    src: 'https://images.pexels.com/photos/2165471/pexels-photo-2165471.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    src: '/images/carousel/Home4.jpeg',
     alt: 'Agricultural produce',
   },
 ];
