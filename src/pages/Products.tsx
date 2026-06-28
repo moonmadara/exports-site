@@ -34,9 +34,9 @@ const products: ProductData[] = [
     tagColor: 'bg-cream-200 text-soil-700 border-cream-300',
     desc: 'Fine mesh texture, strong natural aroma, zero additives, low moisture, and long storage stability for food industries.',
     images: [
-      { src: 'https://images.pexels.com/photos/28025270/pexels-photo-28025270.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Onion powder' },
-      { src: 'https://images.pexels.com/photos/775912/pexels-photo-775912.jpeg?auto=compress&cs=tinysrgb&w=600', alt: 'Spice processing' },
-      { src: 'https://images.pexels.com/photos/4637/sunset-landscape-agriculture-nature.jpg?auto=compress&cs=tinysrgb&w=600', alt: 'Agricultural landscape' },
+      { src: 'images/onion-powder/powder1.jpeg', alt: 'Onion powder' },
+      { src: 'images/onion-powder/powder2.jpeg', alt: 'Spice processing' },
+      { src: 'images/onion-powder/powder3.jpeg', alt: 'Agricultural landscape' },
     ],
     highlights: ['80-120 Mesh', 'Moisture \u2264 6%', 'Zero Additives', 'Private Label Options'],
   },
