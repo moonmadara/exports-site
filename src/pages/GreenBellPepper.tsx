@@ -4,7 +4,7 @@ import { CheckCircle2, ArrowRight, Package, Ruler, MessageCircle } from 'lucide-
 import ImageCarousel from '../components/ImageCarousel';
 import ProductNav from '../components/ProductNav';
 
-const WHATSAPP_NUMBER = '919778888339';
+const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const productImages = [

@@ -1,8 +1,8 @@
 import { useState, type FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Globe, Clock, Send, CheckCircle2, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, Phone, Globe, Clock, Send, CheckCircle2, MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '919778888339';
+const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export default function Contact() {
@@ -74,10 +74,27 @@ export default function Contact() {
                   <div>
                     <p className="text-sm font-semibold text-soil-900">Email</p>
                     <a
-                      href="mailto:sales@sattvikaoverseas.com"
+                      href="mailto:sattvikaoverseas@gmail.com"
                       className="mt-1 text-sm text-grove-600 hover:text-grove-700 transition-colors"
                     >
-                      sales@sattvikaoverseas.com
+                      sattvikaoverseas@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="h-px bg-cream-200" />
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-grove-50 text-grove-600 flex items-center justify-center shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-soil-900">Phone</p>
+                    <a
+                      href="tel:+919372956041"
+                      className="mt-1 text-sm text-grove-600 hover:text-grove-700 transition-colors"
+                    >
+                      +91 93729 56041
                     </a>
                   </div>
                 </div>

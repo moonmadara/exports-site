@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sprout, ChevronDown, MessageCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '919778888339';
+const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const navLinks = [

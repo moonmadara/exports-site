@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Sprout, MapPin, Mail, Globe, Clock, MessageCircle, ChevronDown } from 'lucide-react';
+import { Sprout, MapPin, Mail, Phone, Globe, Clock, MessageCircle, ChevronDown } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '919778888339';
+const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export default function Footer() {
@@ -138,10 +138,19 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-grove-400 shrink-0" />
                 <a
-                  href="mailto:sales@sattvikaoverseas.com"
+                  href="mailto:sattvikaoverseas@gmail.com"
                   className="text-sm text-soil-400 hover:text-cream-200 transition-colors"
                 >
-                  sales@sattvikaoverseas.com
+                  sattvikaoverseas@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-grove-400 shrink-0" />
+                <a
+                  href="tel:+919372956041"
+                  className="text-sm text-soil-400 hover:text-cream-200 transition-colors"
+                >
+                  +91 93729 56041
                 </a>
               </li>
               <li className="flex items-center gap-3">
