@@ -8,10 +8,10 @@ const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const productImages = [
-  { src: 'https://images.pexels.com/photos/28025270/pexels-photo-28025270.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Onion powder' },
-  { src: 'https://images.pexels.com/photos/775912/pexels-photo-775912.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Spice processing' },
-  { src: 'https://images.pexels.com/photos/4637/sunset-landscape-agriculture-nature.jpg?auto=compress&cs=tinysrgb&w=800', alt: 'Agricultural landscape' },
-  { src: 'https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg?auto=compress&cs=tinysrgb&w=800', alt: 'Packaged spices' },
+  { src: 'images/onion-powder/powder1.jpeg', alt: 'Onion powder' },
+  { src: 'images/onion-powder/powder2.jpeg', alt: 'Spice processing' },
+  { src: 'images/onion-powder/powder3.jpeg', alt: 'Agricultural landscape' },
+  { src: 'images/onion-powder/powder4.jpeg', alt: 'Packaged spices' },
 ];
 
 const specs: [string, string][] = [
