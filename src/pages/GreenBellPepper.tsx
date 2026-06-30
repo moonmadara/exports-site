@@ -8,10 +8,10 @@ const WHATSAPP_NUMBER = '919372956041';
 const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 const productImages = [
-  { src: 'images/green-bell-pepper/Pepper1.jpeg', alt: 'Green bell peppers' },
-  { src: 'images/green-bell-pepper/Pepper2.jpeg', alt: 'Bell pepper harvest' },
-  { src: 'images/green-bell-pepper/Pepper3.jpeg', alt: 'Fresh vegetables' },
-  { src: 'images/green-bell-pepper/Pepper4.jpeg', alt: 'Bell pepper variety' },
+  { src: '/images/products/green-bell-pepper/Pepper1.jpeg', alt: 'Green bell peppers' },
+  { src: '/images/products/green-bell-pepper/Pepper2.jpeg', alt: 'Bell pepper harvest' },
+  { src: '/images/products/green-bell-pepper/Pepper3.jpeg', alt: 'Fresh vegetables' },
+  { src: '/images/products/green-bell-pepper/Pepper4.jpeg', alt: 'Bell pepper variety' },
 ];
 
 const specs: [string, string][] = [

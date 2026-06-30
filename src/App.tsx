@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/products/onion-powder" element={<OnionPowder />} />
           <Route path="/products/green-bell-pepper" element={<GreenBellPepper />} />
           <Route path="/sourcing-quality" element={<SourcingQuality />} />
-          <Route path="/certifications-compliance" element={<CertificationsCompliance />} />
+          <Route path="/logistics-certifications" element={<CertificationsCompliance />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>

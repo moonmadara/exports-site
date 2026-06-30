@@ -5,7 +5,6 @@ import {
   Users,
   Cog,
   Award,
-  Ship,
   FileCheck,
   ShieldCheck,
   Leaf,
@@ -109,9 +108,6 @@ const documents = [
   'Packing List',
   'Insurance Documents',
 ];
-
-const shippingMethods = ['Sea Freight', 'Air Freight', 'Reefer Container Services', 'Temperature-Controlled Shipments'];
-const incoterms = ['FOB', 'CIF', 'EXW'];
 
 export default function SourcingQuality() {
   return (
@@ -417,57 +413,6 @@ export default function SourcingQuality() {
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Logistics */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-white rounded-2xl p-8 sm:p-10 border border-cream-200"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-grove-100 text-grove-600 flex items-center justify-center">
-                <Ship className="w-5 h-5" />
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-display font-bold text-soil-900">
-                Logistics & Shipping
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
-                  Shipping Methods
-                </h3>
-                <div className="flex flex-wrap gap-2.5">
-                  {shippingMethods.map((m) => (
-                    <span
-                      key={m}
-                      className="px-4 py-2 rounded-lg bg-cream-100 text-sm font-medium text-soil-700 border border-cream-200"
-                    >
-                      {m}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-display font-bold text-soil-900 mb-4">
-                  Incoterms Available
-                </h3>
-                <div className="flex flex-wrap gap-2.5">
-                  {incoterms.map((t) => (
-                    <span
-                      key={t}
-                      className="px-4 py-2 rounded-lg bg-grove-100 text-sm font-semibold text-grove-700 border border-grove-200"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           </motion.div>

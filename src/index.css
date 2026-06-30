@@ -10,11 +10,19 @@
   }
 
   body {
-    @apply font-body text-soil-800 bg-cream-50;
+    @apply font-body text-soil-800 bg-cream-50 antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display font-bold;
+  }
+
+  button, input, select, textarea {
+    @apply font-body;
+  }
+
+  a, p, span, li, blockquote, label {
+    @apply font-body;
   }
 }
 

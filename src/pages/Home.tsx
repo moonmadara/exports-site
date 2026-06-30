@@ -337,9 +337,10 @@ export default function Home() {
                 tag: 'Processed',
                 desc: 'Fine mesh texture, strong aroma, zero additives, low moisture, and long storage stability for food industries.',
                 images: [
-                  { src: 'images/onion-powder/powder1.jpeg', alt: 'Onion powder' },
-                  { src: 'images/onion-powder/powder2.jpeg', alt: 'Agricultural landscape' },
-                  { src: 'images/onion-powder/powder3.jpeg', alt: 'Spice processing' },
+                  { src: '/images/products/onion-powder/powder1.jpeg', alt: 'Onion powder' },
+                  { src: '/images/products/onion-powder/powder2.jpeg', alt: 'Agricultural landscape' },
+                  { src: '/images/products/onion-powder/powder3.jpeg', alt: 'Spice processing' },
+                  { src: '/images/products/onion-powder/powder4.jpeg', alt: 'Packaged spices' },
                 ],
               },
               {
@@ -348,9 +349,10 @@ export default function Home() {
                 tag: 'Fresh Vegetables',
                 desc: 'Export-quality capsicum — firm, crisp, uniform bright green, available in multiple size grades.',
                 images: [
-                  { src: 'images/green-bell-pepper/Pepper1.jpeg', alt: 'Green bell peppers' },
-                  { src: 'images/green-bell-pepper/Pepper2.jpeg', alt: 'Bell pepper harvest' },
-                  { src: 'images/green-bell-pepper/Pepper3.jpeg', alt: 'Fresh vegetables' },
+                  { src: '/images/products/green-bell-pepper/Pepper1.jpeg', alt: 'Green bell peppers' },
+                  { src: '/images/products/green-bell-pepper/Pepper2.jpeg', alt: 'Bell pepper harvest' },
+                  { src: '/images/products/green-bell-pepper/Pepper3.jpeg', alt: 'Fresh vegetables' },
+                  { src: '/images/products/green-bell-pepper/Pepper4.jpeg', alt: 'Bell pepper variety' },
                 ],
               },
             ].map((product, i) => (

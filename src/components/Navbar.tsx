@@ -18,7 +18,7 @@ const navLinks = [
     ],
   },
   { label: 'Sourcing & Quality', to: '/sourcing-quality' },
-  { label: 'Certifications', to: '/certifications-compliance' },
+  { label: 'Logistics & Certifications', to: '/logistics-certifications' },
   { label: 'Contact Us', to: '/contact' },
 ];
 

@@ -59,7 +59,7 @@ export default {
       },
       fontFamily: {
         display: ['Georgia', 'Cambria', '"Times New Roman"', 'serif'],
-        body: ['"Inter"', '"Segoe UI"', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },

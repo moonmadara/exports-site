@@ -89,8 +89,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/certifications-compliance" className="text-sm text-soil-400 hover:text-cream-200 transition-colors">
-                  Certifications & Compliance
+                <Link to="/logistics-certifications" className="text-sm text-soil-400 hover:text-cream-200 transition-colors">
+                  Logistics & Certifications
                 </Link>
               </li>
               <li>
@@ -197,6 +197,17 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Sattvika Overseas. All rights
             reserved. &mdash; &ldquo;Delivering India&rsquo;s Agricultural
             Excellence to Global Markets.&rdquo;
+          </p>
+          <p className="text-xs text-soil-500 mt-2">
+            Developed by{' '}
+            <a
+              href="https://topbestdigital.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-grove-400 hover:text-grove-300 transition-colors"
+            >
+              TopBestDigital
+            </a>
           </p>
         </div>
       </div>

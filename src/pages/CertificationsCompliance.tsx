@@ -47,7 +47,7 @@ export default function CertificationsCompliance() {
               Compliance & Documentation
             </span>
             <h1 className="mt-3 text-4xl sm:text-5xl font-display font-bold text-balance">
-              Certifications & Compliance
+              Logistics & Certifications
             </h1>
             <p className="mt-4 text-lg text-grove-200 max-w-2xl">
               Our export operations are fully compliant with Indian and
